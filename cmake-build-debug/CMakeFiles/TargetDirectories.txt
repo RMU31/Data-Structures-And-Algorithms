@@ -1,0 +1,3 @@
+/Users/RMU31/CLionProjects/NetflixMovies/cmake-build-debug/CMakeFiles/NetflixMovies.dir
+/Users/RMU31/CLionProjects/NetflixMovies/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/RMU31/CLionProjects/NetflixMovies/cmake-build-debug/CMakeFiles/rebuild_cache.dir
