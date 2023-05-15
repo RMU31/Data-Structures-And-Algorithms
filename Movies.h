@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#pragma once
 
 using namespace std;
 using namespace std::chrono;
@@ -13,7 +14,7 @@ public:
     map<string, string> data;
     Movies *next;
 
-    ~Movies() {}  // No idea what this does
+    ~Movies() {}
 
     // Movies constructor
     Movies(string rank, string title, string year, string score, string director, string cast, string consensus) {
@@ -38,7 +39,7 @@ public:
         cout << "Critics Consensus: " << data["consensus"] << endl;
     }
 
-    string GetData() {
+    string getMovies() {
         return data[filterBy];
     }
 };

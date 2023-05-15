@@ -1,4 +1,5 @@
 #include "Movies.h"
+#pragma once
 
 class MoviesList {
 public:

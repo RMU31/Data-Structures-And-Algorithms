@@ -4,27 +4,28 @@
 #include <vector>
 #include <sstream>
 
+#include "MoviesList.h"
+
 using namespace std;
 using namespace std::chrono;
 
-vector<vector<string>> getData(string fileName) {
-    vector<vector<string>> moviesData;
+void getData(MoviesList *moviesList, string fileName) {
     vector<string> row;
     string line, word;
 
     fstream file (fileName, ios::in);
     if(file.is_open()) {
-        while(getline(file, line)){ // gets each line of the file
+        while(getline(file, line)){
             stringstream str(line);
-            while(getline(str, word, ',')) { // gets each section of the line separated by ','
+            while(getline(str, word, ',')) {
                 row.push_back(word);
             }
-            moviesData.push_back(row);
+            moviesList->Insert(new Movies(row[1], row[2], row[3], row[4], row[5], row[6], row[7]));
+            moviesList->size++;
         }
     }
     else {
-        cout<<"Could not open the file" << endl;
+        cout<<"Could not open the data file" << endl;
     }
-
-    return moviesData;
 }
+
