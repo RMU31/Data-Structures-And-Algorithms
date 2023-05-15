@@ -3,4 +3,4 @@ project(NetflixMovies)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(NetflixMovies main.cpp)
+add_executable(NetflixMovies main.cpp Movies.h MoviesList.h Data.h)
