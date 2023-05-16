@@ -1,8 +1,5 @@
 #include <iostream>
-#include <fstream>
-#include <string>
 #include <vector>
-#include <sstream>
 
 #include "Data.h"
 #include "MoviesList.h"
@@ -13,5 +10,15 @@ int main() {
     MoviesList *moviesList = new MoviesList;
 
     getData(moviesList, "../100 Best Movies on Netflix.csv");
+
+    cout << "Welcome! Please choose which category you would like to search movies by" << endl;
+    cout << "These are the categories available to search netflix movies by" << endl;
+    searchCategories();
+    cin >> searchBy;
+
+    cout << "Thank you for choosing score! Please pick a score out of 100" << endl;
+    cin >> filterBy;
+
+
     return 0;
 }

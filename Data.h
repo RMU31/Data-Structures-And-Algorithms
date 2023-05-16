@@ -29,3 +29,10 @@ void getData(MoviesList *moviesList, string fileName) {
     }
 }
 
+void searchCategories() {
+    string moviesOptions[] = {"rank", "year", "score"};
+    for (const auto &item: moviesOptions){
+        cout << " | " << item;
+    }
+    cout << endl;
+}

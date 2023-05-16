@@ -124,7 +124,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "SortMoviesData.h",
+			"path" : "SearchMoviesData.h",
 			"sourceGroupIndex" : 1
 		}
 	],

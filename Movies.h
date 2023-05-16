@@ -6,6 +6,7 @@
 using namespace std;
 using namespace std::chrono;
 
+static string searchBy;
 static string filterBy;
 
 // Defining the movies class
@@ -39,7 +40,7 @@ public:
         cout << "Critics Consensus: " << data["consensus"] << endl;
     }
 
-    string getMovies() {
-        return data[filterBy];
+    string getCategory() {
+        return data[searchBy];
     }
 };
