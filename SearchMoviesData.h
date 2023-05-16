@@ -11,7 +11,7 @@
 using namespace std;
 using namespace std::chrono;
 
-Movies* getMiddleValue(Movies* start, Movies* last) {
+map <string, string> Movies* getMiddleValue(Movies* start, Movies* last) {
     if (start == NULL)
         return NULL;
 
@@ -49,28 +49,28 @@ Movies* getMiddleValue(Movies* start, Movies* last) {
 //    slow->next = NULL;
 //}
 
-//Movies* BinarySearch(Movies **firstRef, string filterBy) {
-//    Movies* start = head;
-//    Movies* last = NULL;
-//
-//    do {
-//        Movies* mid = getMiddleValue(start, last);
-//
-//        if(mid == NULL)
-//            return NULL;
-//
-//
-//        if (mid->data == filterBy)
-//            return mid;
-//
-//
-//        else if (mid->data < filterBy)
-//            start = mid->next;
-//
-//        else
-//            last = mid;
-//
-//    } while (last == NULL || last != start);
-//
-//    return NULL;
-//}
+map <string, string> Movies* BinarySearch(Movies *head, string filterBy) {
+    Movies* start = head;
+    Movies* last = NULL;
+
+    do {
+        Movies* mid = getMiddleValue(start, last);
+
+        if(mid == NULL)
+            return NULL;
+
+
+        if (mid->data == filterBy)
+            return mid;
+
+
+        else if (mid->data < filterBy)
+            start = mid->next;
+
+        else
+            last = mid;
+
+    } while (last == NULL || last != start);
+
+    return NULL;
+}

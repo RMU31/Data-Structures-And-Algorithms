@@ -3,6 +3,7 @@
 
 #include "Data.h"
 #include "MoviesList.h"
+#include "SearchMoviesData.h"
 
 using namespace std;
 
@@ -16,8 +17,10 @@ int main() {
     searchCategories();
     cin >> searchBy;
 
-    cout << "Thank you for choosing score! Please pick a score out of 100" << endl;
+    cout << "Thank you for choosing score! Please pick a score between 87-100" << endl;
     cin >> filterBy;
+
+    BinarySearch(&moviesList->head, filterBy);
 
 
     return 0;
