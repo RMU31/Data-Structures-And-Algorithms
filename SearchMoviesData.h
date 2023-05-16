@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include<stdio.h>
+#include<stdlib.h>
 
 #include "MoviesList.h"
 
@@ -14,42 +16,61 @@ Movies* getMiddleValue(Movies* start, Movies* last) {
         return NULL;
 
     Movies* slow = start;
-    Movies* fast = start -> next;
+    Movies* fast = start->next;
 
     while (fast != last) {
-        fast = fast -> next;
+        fast = fast->next;
 
         if(fast != last) {
-            slow = slow -> next;
-            fast = fast -> next;
+            slow = slow->next;
+            fast = fast->next;
         }
     }
 
     return slow;
 }
 
-int BinarySearch(Movies *head, string filterBy) {
-    Movies* start = head;
-    Movies* last = NULL;
+//void getMiddleValue(Movies* head, Movies** frontRef, Movies** backRef) {
+//
+//    Movies *slow = head;
+//    Movies *fast = head->next;
+//
+//
+//    while(fast != NULL) {
+//        fast = fast->next;
+//        if(fast != NULL) {
+//            slow = slow->next;
+//            fast = fast->next;
+//        }
+//    }
+//
+//    *frontRef = head;
+//    *backRef = slow->next;
+//    slow->next = NULL;
+//}
 
-    do {
-        Movies* mid = getMiddleValue(start, last);
-
-        if(mid == NULL)
-            return NULL;
-
-
-        if (mid -> data == filterBy)
-            return mid;
-
-
-        else if(mid -> data < filterBy)
-            start = mid -> next;
-
-        else
-            last = mid;
-        
-    } while (last == NULL || last != start);
-
-    return NULL;
-}
+//Movies* BinarySearch(Movies **firstRef, string filterBy) {
+//    Movies* start = head;
+//    Movies* last = NULL;
+//
+//    do {
+//        Movies* mid = getMiddleValue(start, last);
+//
+//        if(mid == NULL)
+//            return NULL;
+//
+//
+//        if (mid->data == filterBy)
+//            return mid;
+//
+//
+//        else if (mid->data < filterBy)
+//            start = mid->next;
+//
+//        else
+//            last = mid;
+//
+//    } while (last == NULL || last != start);
+//
+//    return NULL;
+//}
