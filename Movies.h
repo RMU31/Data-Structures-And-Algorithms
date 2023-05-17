@@ -12,7 +12,7 @@ static string filterBy;
 // Defining the movies class
 class Movies {
 public:
-    map<string, string> data;
+    map<string, string> data;  // mapping the movies with a string based key-value pair
     Movies *next;
 
     ~Movies() {}
@@ -40,6 +40,8 @@ public:
         cout << "Critics Consensus: " << data["consensus"] << endl;
     }
 
+    // will return the search category to the movies class
+    // NOT used at the moment- can use it when have multiple categories to search through
     string getCategory() {
         return data[searchBy];
     }
