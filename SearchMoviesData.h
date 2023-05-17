@@ -49,7 +49,7 @@ map <string, string> Movies* getMiddleValue(Movies* start, Movies* last) {
 //    slow->next = NULL;
 //}
 
-map <string, string> Movies* BinarySearch(Movies *head, string filterBy) {
+map <string, string> Movies* BinarySearch(Movies *head, string key) {
     Movies* start = head;
     Movies* last = NULL;
 
@@ -60,11 +60,11 @@ map <string, string> Movies* BinarySearch(Movies *head, string filterBy) {
             return NULL;
 
 
-        if (mid->data == filterBy)
+        if (mid->data == key)
             return mid;
 
 
-        else if (mid->data < filterBy)
+        else if (mid->data < key)
             start = mid->next;
 
         else

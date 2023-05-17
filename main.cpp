@@ -20,7 +20,7 @@ int main() {
     cout << "Thank you for choosing score! Please pick a score between 87-100" << endl;
     cin >> filterBy;
 
-    BinarySearch(&moviesList->head, filterBy);
+    BinarySearch(Movies &moviesList, filterBy);
 
 
     return 0;
