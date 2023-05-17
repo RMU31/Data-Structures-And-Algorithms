@@ -18,7 +18,7 @@ public:
 
     void Display() {
         Movies *current = first;
-        int count = 0;  // do I need this???
+        int count = 0;
 
         while(current != 0) {
             current->Display();

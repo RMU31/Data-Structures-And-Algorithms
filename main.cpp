@@ -9,6 +9,7 @@ using namespace std;
 
 int main() {
     MoviesList *moviesList = new MoviesList;
+    Movies *movies = new Movies;
 
     getData(moviesList, "../100 Best Movies on Netflix.csv");
 
@@ -20,7 +21,7 @@ int main() {
     cout << "Thank you for choosing score! Please pick a score between 87-100" << endl;
     cin >> filterBy;
 
-    BinarySearch(Movies &moviesList, filterBy);
+    BinarySearch(Movies* *movies, filterBy);
 
 
     return 0;
