@@ -13,8 +13,8 @@ using namespace std;
 using namespace std::chrono;
 
 Movies *getMiddleValue(Movies* start, Movies* last) {
-    if (start == NULL)
-        return NULL;
+    if (start == nullptr)
+        return nullptr;
 
     Movies* slow = start;
     Movies* fast = start->next;
@@ -27,17 +27,17 @@ Movies *getMiddleValue(Movies* start, Movies* last) {
     return slow;
 }
 
-Movies *BinarySearch(Movies *head, string target) {
+Movies *BinarySearch(Movies* head, string target) {
     Movies* start = head;
-    Movies* last = NULL;
+    Movies* last = nullptr;
     string key = "score";
 
     do {
         Movies* mid = getMiddleValue(start, last);
         cout << mid << endl;
 
-        if(mid == NULL)
-            return NULL;
+        if(mid == nullptr)
+            return nullptr;
 
 
         if (mid->data[key] == target)
@@ -50,26 +50,7 @@ Movies *BinarySearch(Movies *head, string target) {
         else
             last = mid;
 
-    } while (last == NULL || last != start);
+    } while (last == nullptr || last != start);
 
-    return NULL;
+    return nullptr;
 }
-
-//void getMiddleValue(Movies* head, Movies** frontRef, Movies** backRef) {
-//
-//    Movies *slow = head;
-//    Movies *fast = head->next;
-//
-//
-//    while(fast != NULL) {
-//        fast = fast->next;
-//        if(fast != NULL) {
-//            slow = slow->next;
-//            fast = fast->next;
-//        }
-//    }
-//
-//    *frontRef = head;
-//    *backRef = slow->next;
-//    slow->next = NULL;
-//}
