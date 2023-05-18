@@ -13,7 +13,7 @@ int main() {
     MoviesList *moviesList = new MoviesList;
 
     // calls the getData method to retrieve the data from the Movies .csv file
-    getData(moviesList, "../100 Best Movies on Netflix.csv");
+   getData(moviesList, "../100 Best Movies on Netflix.csv");
 
     // Asks the user what category they would like to search movies by
     cout << "Welcome! Please choose which category you would like to search movies by" << endl;
@@ -34,8 +34,27 @@ int main() {
     // Calls the BinarySearch algorithm to sort and search through the linked list
     BinarySearch(&moviesList->first, filterBy);
 
+
+
     // displays the movies searched for
-    moviesList->Display();
+    moviesList->DisplayData();
+
+
+    // ALTERNATIVE APPROACH
+//    Movies* result = BinarySearch::search(moviesList->movies, filterBy);
+//
+//    if (result != nullptr) {
+//        cout << "Found movie: " << result->getScore() << endl;
+//    } else {
+//        cout << "Movie not found." << endl;
+//    }
+//
+//    Movies* middleMovie = getMiddleValue(moviesList->movies);
+//    if (middleMovie != nullptr) {
+//        std::cout << "Middle movie: " << middleMovie->getScore() << std::endl;
+//    } else {
+//        cout << "No middle movie found." << endl;
+//    }
 
 
 

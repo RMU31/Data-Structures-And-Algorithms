@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#include <string>
 #pragma once
 
 using namespace std;
@@ -29,6 +30,16 @@ public:
 
     }
 
+    // SET method
+    void setScore(const string& score) {
+        data["Score"] = score;
+    }
+
+    // GET method
+    string getScore() const {
+        auto it = data.find("Score");
+        return it != data.end() ? it->second : "";
+    }
     // This method will display the categories available to the user to filter the dataset by.
     void Display() {
         cout << "Rank: " << data["rank"] << endl;

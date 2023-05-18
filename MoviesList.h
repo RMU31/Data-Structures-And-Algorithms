@@ -1,9 +1,11 @@
 #include "Movies.h"
+#include <list>
 #pragma once
 
 class MoviesList {
 public:
     Movies *first;
+    list<Movies> movies;
     int size;
 
     MoviesList() {
@@ -16,7 +18,7 @@ public:
         first = newMovies;
     }
 
-    void Display() {
+    void DisplayData() {
         Movies *current = first;
         int count = 0;
 
@@ -26,4 +28,5 @@ public:
             count++;
         }
     }
+
 };
