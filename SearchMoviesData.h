@@ -34,8 +34,8 @@ Movies *getMiddleValue(Movies* start, Movies* last) {
 }
 
 //
-Movies *BinarySearch(Movies* head, string target) {
-    Movies* start = head->next;
+Movies *BinarySearch(Movies **head, string target) {
+    Movies* start = *head;
     Movies* last = nullptr;
     string key = "score";
 

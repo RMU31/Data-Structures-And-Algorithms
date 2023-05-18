@@ -32,7 +32,7 @@ int main() {
     cin >> filterBy;
 
     // Calls the BinarySearch algorithm to sort and search through the linked list
-    BinarySearch(moviesList->first, filterBy);
+    BinarySearch(&moviesList->first, filterBy);
 
     // displays the movies searched for
     moviesList->Display();
