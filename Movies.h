@@ -30,12 +30,12 @@ public:
 
     }
 
-    // SET method
+    // SET method for the alternative approach
     void setScore(const string& score) {
         data["Score"] = score;
     }
 
-    // GET method
+    // GET method for the alternative approach
     string getScore() const {
         auto it = data.find("Score");
         return it != data.end() ? it->second : "";

@@ -14,7 +14,7 @@ using namespace std;
 using namespace std::chrono;
 
 // Method created to get the middle point of the linked list
-// slow and fast pointers used, where fast will jum 2 steps and slow only 1. When fast reaches the end, slow will reach the middle value.
+// slow and fast pointers used, where fast will jump 2 steps and slow only 1. When fast reaches the end, slow will reach the middle value.
 Movies *getMiddleValue(Movies* start, Movies* last) {
     if (start == nullptr)
         return nullptr;
@@ -26,7 +26,6 @@ Movies *getMiddleValue(Movies* start, Movies* last) {
     // while loop to iterate the slow and fast points through the list
     // normally this while loop has an extra if condition to increment fast one more time, but refactored it in the while loop itself using next twice
     while (fast != last && fast->next != last) {
-//        cout << "blimy" << endl;
         slow = slow->next;
         fast = fast->next->next;
     }
@@ -35,19 +34,14 @@ Movies *getMiddleValue(Movies* start, Movies* last) {
     return slow;
 }
 
-//
+// recursive binary search method with a do while loop
 Movies *BinarySearch(Movies **head, string target) {
     Movies* start = *head;
     Movies* last = nullptr;
-    string key = "Score";
-
-//    cout << start << endl;
+    string key = "Score"; // constant
 
     do {
         Movies* mid = getMiddleValue(start, last);
-//        cout << mid->data[key].data() << endl;
-//        cout << "hello" << endl;
-
 
         if(mid == nullptr)
             return nullptr;
@@ -74,10 +68,7 @@ Movies *BinarySearch(Movies **head, string target) {
 //class BinarySearch {
 //public:
 //    static Movies* search(const list<Movies>& movies, const string& target) {
-//        cout << "hello" << endl;
 //        for (const auto& movie : movies) {
-//            cout << movie.getScore() << endl;
-//            cout << "hello" << endl;
 //            if (movie.getScore() == target) {
 //                return const_cast<Movies*>(&movie);  // Found the target
 //            }
